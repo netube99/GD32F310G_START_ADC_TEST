@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "systick.h": "c",
+        "gd32f3x0.h": "c",
+        "bsp_adc.h": "c"
+    }
+}
