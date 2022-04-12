@@ -1,4 +1,4 @@
-Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+Component: ARM Compiler 6.15 Tool: armlink [5dfeaa00]
 
 ==============================================================================
 
@@ -3394,7 +3394,6 @@ Image Symbol Table
     ../clib/string.c                         0x00000000   Number         0  strcpy.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  strncmp.o ABSOLUTE
-    ../code/device/CMSIS/Source/startup_gd32f3x0.s 0x00000000   Number         0  startup_gd32f3x0.o ABSOLUTE
     ../fplib/d2f.s                           0x00000000   Number         0  d2f.o ABSOLUTE
     ../fplib/dflt.s                          0x00000000   Number         0  dflt_clz.o ABSOLUTE
     ../fplib/dmul.s                          0x00000000   Number         0  dmul.o ABSOLUTE
@@ -3408,6 +3407,7 @@ Image Symbol Table
     ../fplib/printf1.s                       0x00000000   Number         0  printf1.o ABSOLUTE
     ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
     ../mathlib/fpclassify.c                  0x00000000   Number         0  fpclassify.o ABSOLUTE
+    ..\code\device\CMSIS\Source\startup_gd32f3x0.s 0x00000000   Number         0  startup_gd32f3x0.o ABSOLUTE
     ..\code\rtos\source\context_rvds.S       0x00000000   Number         0  context_rvds.o ABSOLUTE
     board.c                                  0x00000000   Number         0  board.o ABSOLUTE
     bsp_adc.c                                0x00000000   Number         0  bsp_adc.o ABSOLUTE
@@ -3888,12 +3888,12 @@ Image Symbol Table
     CL$$btod_d2e                             0x08003f8e   Section       62  btod.o(CL$$btod_d2e)
     CL$$btod_d2e_denorm_low                  0x08003fcc   Section       70  btod.o(CL$$btod_d2e_denorm_low)
     CL$$btod_d2e_norm_op1                    0x08004012   Section       96  btod.o(CL$$btod_d2e_norm_op1)
-    CL$$btod_div_common                      0x08004074   Section      824  btod.o(CL$$btod_div_common)
-    CL$$btod_e2e                             0x080043ac   Section      220  btod.o(CL$$btod_e2e)
-    CL$$btod_ediv                            0x08004488   Section       42  btod.o(CL$$btod_ediv)
-    CL$$btod_emul                            0x080044b2   Section       42  btod.o(CL$$btod_emul)
-    CL$$btod_mult_common                     0x080044dc   Section      580  btod.o(CL$$btod_mult_common)
-    i.__ARM_fpclassify                       0x08004720   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    CL$$btod_div_common                      0x08004072   Section      824  btod.o(CL$$btod_div_common)
+    CL$$btod_e2e                             0x080043aa   Section      220  btod.o(CL$$btod_e2e)
+    CL$$btod_ediv                            0x08004486   Section       42  btod.o(CL$$btod_ediv)
+    CL$$btod_emul                            0x080044b0   Section       42  btod.o(CL$$btod_emul)
+    CL$$btod_mult_common                     0x080044da   Section      580  btod.o(CL$$btod_mult_common)
+    i.__ARM_fpclassify                       0x0800471e   Section        0  fpclassify.o(i.__ARM_fpclassify)
     locale$$code                             0x08004750   Section       44  lc_numeric_c.o(locale$$code)
     $v0                                      0x0800477c   Number         0  d2f.o(x$fpl$d2f)
     x$fpl$d2f                                0x0800477c   Section       98  d2f.o(x$fpl$d2f)
@@ -4138,12 +4138,12 @@ Image Symbol Table
     strlen                                   0x0800048d   Thumb Code    62  strlen.o(.text)
     strncmp                                  0x080004cb   Thumb Code   150  strncmp.o(.text)
     __aeabi_memclr                           0x08000561   Thumb Code     0  rt_memclr.o(.text)
-    __rt_memclr                              0x08000561   Thumb Code     0  rt_memclr.o(.text)
-    _memset                                  0x08000565   Thumb Code    64  rt_memclr.o(.text)
+    __rt_memclr                              0x08000561   Thumb Code    68  rt_memclr.o(.text)
+    _memset                                  0x08000565   Thumb Code     0  rt_memclr.o(.text)
     __aeabi_memclr4                          0x080005a5   Thumb Code     0  rt_memclr_w.o(.text)
     __aeabi_memclr8                          0x080005a5   Thumb Code     0  rt_memclr_w.o(.text)
-    __rt_memclr_w                            0x080005a5   Thumb Code     0  rt_memclr_w.o(.text)
-    _memset_w                                0x080005a9   Thumb Code    74  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x080005a5   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x080005a9   Thumb Code     0  rt_memclr_w.o(.text)
     strncpy                                  0x080005f3   Thumb Code    86  strncpy.o(.text)
     __use_two_region_memory                  0x08000649   Thumb Code     2  heapauxi.o(.text)
     __rt_heap_escrow$2region                 0x0800064b   Thumb Code     2  heapauxi.o(.text)
@@ -4301,12 +4301,12 @@ Image Symbol Table
     _btod_d2e                                0x08003f8f   Thumb Code    62  btod.o(CL$$btod_d2e)
     _d2e_denorm_low                          0x08003fcd   Thumb Code    70  btod.o(CL$$btod_d2e_denorm_low)
     _d2e_norm_op1                            0x08004013   Thumb Code    96  btod.o(CL$$btod_d2e_norm_op1)
-    __btod_div_common                        0x08004075   Thumb Code   696  btod.o(CL$$btod_div_common)
-    _e2e                                     0x080043ad   Thumb Code   220  btod.o(CL$$btod_e2e)
-    _btod_ediv                               0x08004489   Thumb Code    42  btod.o(CL$$btod_ediv)
-    _btod_emul                               0x080044b3   Thumb Code    42  btod.o(CL$$btod_emul)
-    __btod_mult_common                       0x080044dd   Thumb Code   580  btod.o(CL$$btod_mult_common)
-    __ARM_fpclassify                         0x08004721   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __btod_div_common                        0x08004073   Thumb Code   696  btod.o(CL$$btod_div_common)
+    _e2e                                     0x080043ab   Thumb Code   220  btod.o(CL$$btod_e2e)
+    _btod_ediv                               0x08004487   Thumb Code    42  btod.o(CL$$btod_ediv)
+    _btod_emul                               0x080044b1   Thumb Code    42  btod.o(CL$$btod_emul)
+    __btod_mult_common                       0x080044db   Thumb Code   580  btod.o(CL$$btod_mult_common)
+    __ARM_fpclassify                         0x0800471f   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
     _get_lc_numeric                          0x08004751   Thumb Code    44  lc_numeric_c.o(locale$$code)
     __aeabi_d2f                              0x0800477d   Thumb Code     0  d2f.o(x$fpl$d2f)
     _d2f                                     0x0800477d   Thumb Code    98  d2f.o(x$fpl$d2f)
@@ -4688,13 +4688,13 @@ Memory Map of the image
     0x08003f8e   0x08003f8e   0x0000003e   Code   RO         2122    CL$$btod_d2e        c_w.l(btod.o)
     0x08003fcc   0x08003fcc   0x00000046   Code   RO         2124    CL$$btod_d2e_denorm_low  c_w.l(btod.o)
     0x08004012   0x08004012   0x00000060   Code   RO         2123    CL$$btod_d2e_norm_op1  c_w.l(btod.o)
-    0x08004072   0x08004072   0x00000002   PAD
-    0x08004074   0x08004074   0x00000338   Code   RO         2132    CL$$btod_div_common  c_w.l(btod.o)
-    0x080043ac   0x080043ac   0x000000dc   Code   RO         2129    CL$$btod_e2e        c_w.l(btod.o)
-    0x08004488   0x08004488   0x0000002a   Code   RO         2126    CL$$btod_ediv       c_w.l(btod.o)
-    0x080044b2   0x080044b2   0x0000002a   Code   RO         2125    CL$$btod_emul       c_w.l(btod.o)
-    0x080044dc   0x080044dc   0x00000244   Code   RO         2131    CL$$btod_mult_common  c_w.l(btod.o)
-    0x08004720   0x08004720   0x00000030   Code   RO         2151    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x08004072   0x08004072   0x00000338   Code   RO         2132    CL$$btod_div_common  c_w.l(btod.o)
+    0x080043aa   0x080043aa   0x000000dc   Code   RO         2129    CL$$btod_e2e        c_w.l(btod.o)
+    0x08004486   0x08004486   0x0000002a   Code   RO         2126    CL$$btod_ediv       c_w.l(btod.o)
+    0x080044b0   0x080044b0   0x0000002a   Code   RO         2125    CL$$btod_emul       c_w.l(btod.o)
+    0x080044da   0x080044da   0x00000244   Code   RO         2131    CL$$btod_mult_common  c_w.l(btod.o)
+    0x0800471e   0x0800471e   0x00000030   Code   RO         2151    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x0800474e   0x0800474e   0x00000002   PAD
     0x08004750   0x08004750   0x0000002c   Code   RO         2147    locale$$code        c_w.l(lc_numeric_c.o)
     0x0800477c   0x0800477c   0x00000062   Code   RO         2058    x$fpl$d2f           fz_wm.l(d2f.o)
     0x080047de   0x080047de   0x0000002e   Code   RO         2061    x$fpl$dflt          fz_wm.l(dflt_clz.o)
@@ -4772,38 +4772,38 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       118         16          0          0       4096       1406   board.o
-       278         20          8          0          8       4010   bsp_adc.o
-       172          4          4          0          0       1394   bsp_uart.o
-        90          4          0          0          4       2656   clock.o
-      1678        600        693          0          0      10531   cmd.o
-       178         24         16          0          0       3119   components.o
-       308         28          0          0          0        784   context_rvds.o
-       872        320        443          0         16       3509   cpuport.o
-       110          4          0          0          0       2034   finsh_port.o
-       486         20          0          0          0       8948   gd32f3x0_adc.o
-       290          0          0          0          0       4806   gd32f3x0_gpio.o
-        10          0          0          0          0        702   gd32f3x0_it.o
-        24          8          0          0          0       3557   gd32f3x0_misc.o
-       644         70          8          0          0      13429   gd32f3x0_rcu.o
-       264          8          0          0          0      15258   gd32f3x0_usart.o
-       142         24          0          0        376       2826   idle.o
-       296          0          0          0          0      10310   ipc.o
-        48          0          0          0          1       1115   irq.o
-      1542        202        263          0        128      14001   kservice.o
-       120         28          0          0          0       1942   main.o
-       852        240         51          0         56       5311   mem.o
-       792        148        161          0          0       4626   msh.o
-       278          4          0         64          0       5989   object.o
-       372         12          0          0         84       4629   scheduler.o
-      1018        124          9          0        153       5894   shell.o
-        64         26        336          0       2048        932   startup_gd32f3x0.o
-       632         76          0          4          0       2998   system_gd32f3x0.o
-       722         16          0          0          0       9193   thread.o
-       558         18          0          0         12       7242   timer.o
+       118         16          0          0       4096       1257   board.o
+       278         20          8          0          8       3760   bsp_adc.o
+       172          4          4          0          0       1298   bsp_uart.o
+        90          4          0          0          4       2509   clock.o
+      1678        600        693          0          0      10199   cmd.o
+       178         24         16          0          0       2994   components.o
+       308         28          0          0          0        796   context_rvds.o
+       872        320        443          0         16       3354   cpuport.o
+       110          4          0          0          0       2030   finsh_port.o
+       486         20          0          0          0       8828   gd32f3x0_adc.o
+       290          0          0          0          0       4731   gd32f3x0_gpio.o
+        10          0          0          0          0        713   gd32f3x0_it.o
+        24          8          0          0          0       3544   gd32f3x0_misc.o
+       644         70          8          0          0      12988   gd32f3x0_rcu.o
+       264          8          0          0          0      14863   gd32f3x0_usart.o
+       142         24          0          0        376       2681   idle.o
+       296          0          0          0          0      10187   ipc.o
+        48          0          0          0          1       1018   irq.o
+      1542        202        263          0        128      13585   kservice.o
+       120         28          0          0          0       1947   main.o
+       852        240         51          0         56       5150   mem.o
+       792        148        161          0          0       4458   msh.o
+       278          4          0         64          0       5815   object.o
+       372         12          0          0         84       4472   scheduler.o
+      1018        124          9          0        153       5861   shell.o
+        64         26        336          0       2048        940   startup_gd32f3x0.o
+       632         76          0          4          0       2757   system_gd32f3x0.o
+       722         16          0          0          0       8908   thread.o
+       558         18          0          0         12       7217   timer.o
 
     ----------------------------------------------------------------------
-     12992       2044       2024         68       6996     153151   Object Totals
+     12992       2044       2024         68       6996     148860   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         34          0          0          0         14          0   (incl. Padding)
 
@@ -4830,7 +4830,7 @@ Image component sizes
          4          0          0          0          0          0   _printf_percent_end.o
         10          0          0          0          0         68   _sputc.o
        228          4        148          0          0         96   bigflt0.o
-      1936        128          0          0          0        668   btod.o
+      1936        128          0          0          0        672   btod.o
         18          0          0          0          0         80   exit.o
          6          0          0          0          0        152   heapauxi.o
          0          0          0          0          0          0   indicate_semi.o
@@ -4868,19 +4868,19 @@ Image component sizes
         48          0          0          0          0        124   fpclassify.o
 
     ----------------------------------------------------------------------
-      5892        234        176          0         96       4184   Library Totals
+      5892        234        176          0         96       4188   Library Totals
         16          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      4910        206        176          0         96       2784   c_w.l
+      4910        206        176          0         96       2788   c_w.l
        918         28          0          0          0       1276   fz_wm.l
         48          0          0          0          0        124   m_wm.l
 
     ----------------------------------------------------------------------
-      5892        234        176          0         96       4184   Library Totals
+      5892        234        176          0         96       4188   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -4889,8 +4889,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     18884       2278       2200         68       7092     154307   Grand Totals
-     18884       2278       2200         68       7092     154307   ELF Image Totals
+     18884       2278       2200         68       7092     150124   Grand Totals
+     18884       2278       2200         68       7092     150124   ELF Image Totals
      18884       2278       2200         68          0          0   ROM Totals
 
 ==============================================================================

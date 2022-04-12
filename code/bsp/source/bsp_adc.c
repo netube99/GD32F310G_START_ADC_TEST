@@ -35,20 +35,20 @@ uint16_t Test_Adc_Sample(void)
 void Test_Adc_Value_Update_Thread(void)
 {
     //转换次数记录，转换结果累加
-    uint32_t cunt = 0, data_cunt = 0;
+    uint32_t count = 0, data_count = 0;
     while (1)
     {
-        if(cunt < TEST_ADC_SAMPLES_REPEATED_NUMBER)                                             //转换次数未满
+        if(count < TEST_ADC_SAMPLES_REPEATED_NUMBER)                                            //转换次数未满
         {
-            data_cunt += Test_Adc_Sample();                                                     //进行一次转换并累加结果原始数据
-            cunt ++;                                                                            //转换次数 +1
+            data_count += Test_Adc_Sample();                                                    //进行一次转换并累加结果原始数据
+            count ++;                                                                           //转换次数 +1
         }
         else                                                                                    //转换次数已满
         {
-            adc_test_raw_data = data_cunt/TEST_ADC_SAMPLES_REPEATED_NUMBER ;                    //累加的原始数据求平均值
+            adc_test_raw_data = data_count/TEST_ADC_SAMPLES_REPEATED_NUMBER ;                   //累加的原始数据求平均值
             adc_test_voltage = 3.3 / 4096 * adc_test_raw_data ;                                 //平均的累加数据转换为电压值
-            data_cunt = 0 ;                                                                     //重新开始下一轮转换
-            cunt = 0 ;
+            data_count = 0 ;                                                                    //重新开始下一轮转换
+            count = 0 ;
             rt_thread_mdelay(100);                                                              //释放线程
         }
     }
